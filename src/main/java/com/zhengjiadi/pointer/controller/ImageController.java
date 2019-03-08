@@ -11,6 +11,6 @@ public class ImageController {
 
     @PostMapping("/add")
     public BaseJson addImage() {
-        return new BaseJson(0, "ok");
+        return new BaseJson("", "ok");
     }
 }

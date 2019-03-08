@@ -2,30 +2,37 @@ package com.zhengjiadi.pointer.utils;
 
 // 通用的返回结构
 public class BaseJson {
-    private int code;
+    private String code;
     private String message;
     private Object data;
 
-    public BaseJson(int errorCode) {
+    public BaseJson() {
+    }
+
+    public BaseJson(String errorCode) {
         this.code = errorCode;
     }
 
-    public BaseJson(int errorCode, String message) {
+    public BaseJson(String errorCode, String message) {
         this.code = errorCode;
         this.message = message;
     }
 
-    public BaseJson(int errorCode, String message, Object object) {
+    public BaseJson(String errorCode, String message, Object object) {
         this.code = errorCode;
         this.message = message;
         this.data = object;
     }
 
-    public int getCode() {
+    public static BaseJson unknownError() {
+        return new BaseJson().setCode("-1").setMessage("unknow Error");
+    }
+
+    public String getCode() {
         return code;
     }
 
-    public BaseJson setCode(int code) {
+    public BaseJson setCode(String code) {
         this.code = code;
         return this;
     }

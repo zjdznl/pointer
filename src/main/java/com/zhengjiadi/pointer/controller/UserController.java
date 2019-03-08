@@ -25,11 +25,12 @@ public class UserController {
 //        BaseJson baseJson =  userService.getUserMsg( id );
 //        return baseJson;
 //    }
+    // todo
     //注册用户
-    @PostMapping("/register")
-    public BaseJson userRegister(@RequestParam("password") String password, @RequestParam("phone") String phone, @RequestParam("code") String code) {
-        return userService.register(phone, password, code);
-    }
+//    @PostMapping("/register")
+//    public BaseJson userRegister(@RequestParam("password") String mail, @RequestParam("phone") String password, @RequestParam("code") String code) {
+//        return userService.register(mail, password, code);
+//    }
 
     @GetMapping("/code")
     public BaseJson getMessageCode(@RequestParam("phone") String phone) {

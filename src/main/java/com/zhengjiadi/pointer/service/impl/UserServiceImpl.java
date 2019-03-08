@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
     @Override
-    public BaseJson register(String phone, String password, String messageCode) {
+    public BaseJson register(String name, String phone, String password, String messageCode) {
+        // 插入一个新用户
         return null;
     }
 
