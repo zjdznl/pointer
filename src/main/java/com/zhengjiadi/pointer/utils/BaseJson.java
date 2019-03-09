@@ -28,6 +28,18 @@ public class BaseJson {
         return new BaseJson().setCode("-1").setMessage("unknow Error");
     }
 
+    public static BaseJson unknownError(String message) {
+        return new BaseJson().setCode("-1").setMessage(message);
+    }
+
+    public static BaseJson success() {
+        return new BaseJson().setCode("0").setMessage("success");
+    }
+
+    public static BaseJson success(String message) {
+        return new BaseJson().setCode("0").setMessage(message);
+    }
+
     public String getCode() {
         return code;
     }
